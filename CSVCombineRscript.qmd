@@ -1,0 +1,58 @@
+---
+title: "CleanUpCSVfiles_Script"
+author: "Max Strul"
+format: html
+editor: visual
+date: 2023-07-25
+---
+
+## Mitochondrial Analyzer Automation
+
+# First we need to clean up the csv files and put all the results into a easily readable results file instead of a bunch of csv files.
+
+To do so run the following code block. Note it will prompt you for the directory, or you can alternatively edit the code with the file directory directly. Please remember to include the full path name. If on mac navigate to your directory using the Finder then in the bottom you can see the visual path where it includes images of folders with names and arrows, then right click and select "Copy File Path".
+
+```{r}
+# Load required packages
+library(readr)
+library(dplyr)
+
+# Prompt user for directory path
+dir_path <- readline(prompt = "Enter directory path: ")
+
+# List all CSV files in the directory
+csv_files <- list.files(path = dir_path, pattern = "\\.csv$", full.names = TRUE)
+
+# Initialize an empty data frame to store the combined results
+combined_data <- data.frame()
+
+# Iterate over each CSV file
+for (file in csv_files) {
+  # Read the CSV file
+  data <- read_csv(file,show_col_types = FALSE)
+  
+  # Extract the file name without extension
+  file_name <- tools::file_path_sans_ext(basename(file))
+  
+  # Add a new column with the file name to the data
+  data_with_name <- data %>% mutate(File = file_name)
+  
+  # Append the data to the combined results
+  combined_data <- bind_rows(combined_data, data_with_name)
+}
+
+# Write the combined results to a new CSV file
+write_csv(combined_data, file.path(dir_path, "results.csv"))
+
+# Print a message indicating the completion of the process
+cat("Data has been successfully combined and saved to 'results.csv'.\n")
+
+```
+
+```{r}
+sessionInfo()
+```
+
+## Notes about code
+
+# Written by Max Strul, with the assitance of ChatGPT for error catching & correcting & code optimatzation as well as commentation.
