@@ -1,5 +1,9 @@
 First step is to download all nesecary code files, specifically the fiji macros or files ending with .ijm
 
+Next please review that you have all the essential plugins for Fiji. This code was tested with the specified versions in software_requirements.txt 
+
+To ensure you have installed the correct mitochondria analyzer plugins, please review the mitochondria analyzer manual.
+
 These confocal images MUST be TWO channel only, bight field "T PMT" and a single fluorecent channel, in this case green was used so it is listed as "Ch2 (G)"
 
 Next, you will create a new folder. You can title this "Analysis_folder_1_experimentINformation" where you can replace experiment information with any other relevent information for your own experiment.
