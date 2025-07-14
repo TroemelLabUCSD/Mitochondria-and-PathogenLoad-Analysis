@@ -8,7 +8,7 @@ Fiji plugins required:
 -lsmreader
 -lsmtoolbox
 -morpholibj
--rohust automatic threshold selection
+-Robust automatic threshold selection
 -sync windows
 -sync measure 3d
 -about trakEM2
