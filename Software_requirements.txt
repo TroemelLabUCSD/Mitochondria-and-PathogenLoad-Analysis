@@ -1,0 +1,7 @@
+To utilize all the code in this repository please use the following softwares and versions:
+
+Fiji - tested with version ImageJ 1.54F Java 1.8.0_322 64-bit on operating system: windows 10 pro 19042.1165
+Python - tested with version Python 3.9.13 on operating system: mac OS 13.4 (22F66)
+Rstudio - tested with version Version 2024.04.2+764 (2024.04.2+764) on operating system: mac OS 13.4 (22F66)
+R - tested with version R version 4.3.2 (2023-10-31) on operating system: mac OS 13.4 (22F66)
+MetaXpress - tested with version 6.5.2.351 2018 on operating system: Windows 10 
