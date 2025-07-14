@@ -10,6 +10,7 @@ Next, you can open a fiji macro by draging and dropping the fiji macro into fiji
 
 Step 1:
 drag in the macro: save_both_raw_ROI_ver_5_mitochondria_analyzer_macro_not_used_7_25_2023.ijm #update for ver5 or ver4 after testing on multiple OS systems --> as of 07/11/2025 ver 5 works well.
+# update 07-14-2025: ver_5 file name was updated because this file was tested and works best on listed software and OS. 
 
 Click "Run" and it should open up a dialogue to select the folder of images. 
 
