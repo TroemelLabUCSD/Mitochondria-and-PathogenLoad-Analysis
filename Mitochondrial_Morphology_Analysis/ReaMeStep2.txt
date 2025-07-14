@@ -1,0 +1,13 @@
+The next step is to use the file Re-processingMasks_for_branch_length.ijm 
+
+To do so, please move all the masks to one new subfolder.
+
+place the Re-processingMasks_for_branch_length.ijm  file within the subfolder
+
+Then click run
+
+It will open up a user interface to select the folder, which it should already be in the correct subfolder, but if it is not, please navigate to the correct directory with the image masks then click "select" or "open" depending on OS.
+
+it will run the code through all the image masks and generate a .csv file for each image mask.
+
+From here you can then use the .qmd R script to combine all the CSVs for easier analysis and data export. Otherwise you can just open each .csv file individually 
