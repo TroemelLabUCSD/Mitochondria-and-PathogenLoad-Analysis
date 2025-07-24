@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ParisUemParameter DateTime="05/01/2025 11:54:23">
+  <TypeParameter Type="MetaMorph.ImageAnalysis.Core.CustomTransformDefinition">
+    <parameterItem itemType="suite" id="892a8fdd-a060-4dbc-b24e-bf45073b1915" SuiteMajorVersion="1" SuiteMinorVersion="0">
+      <parameterItem itemType="suite" id="TransformProperties" SuiteMajorVersion="1" SuiteMinorVersion="0">
+        <parameterItem itemType="valueSystem.Int32" id="Version">2</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="AcceptsSegmentation">False</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="ProducesSegmentation">True</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="AllowAdditionalPlanes">False</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="RenumberObjectIDPerPlane">True</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="ProducesMeasurements">True</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="AcceptsPixels">True</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="ProducesPixels">False</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="IsStandAloneMeasurement">True</parameterItem>
+        <parameterItem itemType="valueSystem.Boolean" id="IsModuleObjectsTransform">False</parameterItem>
+        <parameterItem itemType="valueSystem.String" id="Name">nparisii_l4_infections_30hpi_MS_2025_05_01</parameterItem>
+      </parameterItem>
+      <parameterItem itemType="suiteArrayMetaMorph.ImageAnalysis.Core.CustomTransformStep" id="steps">
+        <parameterItem itemType="suite" id="f6de9896-55dc-47fd-90ce-ac59aba39ed0" SuiteMajorVersion="1" SuiteMinorVersion="0">
+          <parameterItem itemType="suite" id="AdvancedProcessing.GaussianFilter" SuiteMajorVersion="1" SuiteMinorVersion="0">
+            <parameterItem itemType="suite" id="inputParameters" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.Int32" id="sigma">6</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source">TL 30</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="stepInputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source">TL 30</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="inputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Result">Gaussian Filter</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="outputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="valueSystem.Int32" id="Version">1</parameterItem>
+            <parameterItem itemType="valueSystem.String" id="TransformId">AdvancedProcessing.GaussianFilter</parameterItem>
+          </parameterItem>
+          <parameterItem itemType="valueSystem.String" id="StepDescription">Smoothes and blurs an image by a factor (sigma) that you specify.</parameterItem>
+        </parameterItem>
+        <parameterItem itemType="suite" id="5cfadeb7-c8fa-43da-a3dc-77d8207d3057" SuiteMajorVersion="1" SuiteMinorVersion="0">
+          <parameterItem itemType="suite" id="AdvancedProcessing.HBasin" SuiteMajorVersion="1" SuiteMinorVersion="0">
+            <parameterItem itemType="suite" id="inputParameters" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.Int32" id="Threshold">1100</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source">Gaussian Filter</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="stepInputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source">Gaussian Filter</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="inputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Result">HBasin</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="outputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="valueSystem.Int32" id="Version">1</parameterItem>
+            <parameterItem itemType="valueSystem.String" id="TransformId">AdvancedProcessing.HBasin</parameterItem>
+          </parameterItem>
+          <parameterItem itemType="valueSystem.String" id="StepDescription">Finds dark spots where the relative intensity values are equal to or lower than the threshold value that you specify.</parameterItem>
+        </parameterItem>
+        <parameterItem itemType="suite" id="50b2f6c2-7329-4eee-8a3a-93b6b12a09fb" SuiteMajorVersion="1" SuiteMinorVersion="0">
+          <parameterItem itemType="suite" id="Transform.SimpleThreshold" SuiteMajorVersion="1" SuiteMinorVersion="0">
+            <parameterItem itemType="suite" id="inputParameters" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.Int32" id="LowThreshold">250</parameterItem>
+              <parameterItem itemType="valueSystem.Int32" id="HighThreshold">1500</parameterItem>
+              <parameterItem itemType="valueSystem.Boolean" id="InclusiveThreshold">True</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Threshold Image">HBasin</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="stepInputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Threshold Image">HBasin</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="inputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Result Mask">Simple Threshold</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="outputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="valueSystem.Int32" id="Version">1</parameterItem>
+            <parameterItem itemType="valueSystem.String" id="TransformId">Transform.SimpleThreshold</parameterItem>
+          </parameterItem>
+          <parameterItem itemType="valueSystem.String" id="StepDescription">Enable and adjust the threshold of the image manually to help segment the features from the background.</parameterItem>
+        </parameterItem>
+        <parameterItem itemType="suite" id="b294d6f9-879e-4e0b-ac72-65b690cebf8a" SuiteMajorVersion="1" SuiteMinorVersion="0">
+          <parameterItem itemType="suite" id="Transform.FilterMask" SuiteMajorVersion="1" SuiteMinorVersion="0">
+            <parameterItem itemType="suite" id="inputParameters" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="FilterSuite" id="FilterSuite" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                <parameterItem itemType="InnerItem" id="FilterSuite" SuiteMajorVersion="1" SuiteMinorVersion="0" FilterType="RangeFilter">
+                  <parameterItem itemType="suite" id="08cd5ed5-ac92-497d-836c-b29788f08330" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                    <parameterItem itemType="valueSystem.String" id="ColumnName">Total Area</parameterItem>
+                    <parameterItem itemType="valueSystem.Double" id="MinValue">30000</parameterItem>
+                    <parameterItem itemType="valueSystem.Double" id="MaxValue">120000</parameterItem>
+                    <parameterItem itemType="valueSystem.Boolean" id="UseInclusiveRange">False</parameterItem>
+                  </parameterItem>
+                </parameterItem>
+              </parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source Image">TL 30</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="stepInputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source Image">TL 30</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source Mask">Simple Threshold</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Filtered Mask">Filter Mask</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="outputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="valueSystem.Int32" id="Version">1</parameterItem>
+            <parameterItem itemType="valueSystem.String" id="TransformId">Transform.FilterMask</parameterItem>
+          </parameterItem>
+          <parameterItem itemType="valueSystem.String" id="StepDescription">Remove objects from the mask based on measurement values of the objects.</parameterItem>
+        </parameterItem>
+        <parameterItem itemType="suite" id="7a1bd594-9ccf-442e-997b-8644a267bd0b" SuiteMajorVersion="1" SuiteMinorVersion="0">
+          <parameterItem itemType="suite" id="AdvancedProcessing.RemoveBorderObjects" SuiteMajorVersion="1" SuiteMinorVersion="0">
+            <parameterItem itemType="suite" id="inputParameters" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="inputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="stepInputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="inputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source Mask">Filter Mask</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Result Mask">just worms</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="outputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="valueSystem.Int32" id="Version">1</parameterItem>
+            <parameterItem itemType="valueSystem.String" id="TransformId">AdvancedProcessing.RemoveBorderObjects</parameterItem>
+          </parameterItem>
+          <parameterItem itemType="valueSystem.String" id="StepDescription">Excludes all objects that touch the edge of the image.</parameterItem>
+        </parameterItem>
+        <parameterItem itemType="suite" id="0457ebf6-ebb7-4e04-9e64-65e50fc5f0c7" SuiteMajorVersion="1" SuiteMinorVersion="0">
+          <parameterItem itemType="suite" id="CompareImages" SuiteMajorVersion="1" SuiteMinorVersion="0">
+            <parameterItem itemType="suite" id="inputParameters" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="inputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source1">just worms</parameterItem>
+              <parameterItem itemType="valueSystem.String" id="Source2">TL 30</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="stepInputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Source1">just worms</parameterItem>
+              <parameterItem itemType="valueSystem.String" id="Source2">TL 30</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="inputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="valueSystem.Int32" id="Version">1</parameterItem>
+            <parameterItem itemType="valueSystem.String" id="TransformId">CompareImages</parameterItem>
+          </parameterItem>
+          <parameterItem itemType="valueSystem.String" id="StepDescription">Compare two images. This step produces no result.</parameterItem>
+        </parameterItem>
+        <parameterItem itemType="suite" id="286bcc7c-bcba-432d-8813-c6225ecc5663" SuiteMajorVersion="1" SuiteMinorVersion="0">
+          <parameterItem itemType="suite" id="Transform.MeasureMask" SuiteMajorVersion="1" SuiteMinorVersion="0">
+            <parameterItem itemType="suite" id="inputParameters" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="simpleArraySystem.Int32" id="MeasureMaskFeatureGrouping">
+                <valueItem>-1</valueItem>
+              </parameterItem>
+              <parameterItem itemType="suiteArrayMetaMorph.ImageAnalysis.Transforms.MeasureMaskMeasurementSelectionSettings" id="MeasureSelectionSettings">
+                <parameterItem itemType="suite" id="522ab1c4-2876-48b0-8872-5cf26c027531" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                  <parameterItem itemType="suiteArrayMetaMorph.ImageAnalysis.Transforms.MeasureMaskMeasurementItem" id="PairMeasureSelectionSettings">
+                    <parameterItem itemType="suite" id="Total Area" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">True</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Worm area</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">1</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Total Area_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Hole Area" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Hole Area_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Hole Area_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Area" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Area_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Area_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Relative Hole Area" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Relative Hole Area_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Relative Hole Area_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Standard Area Count" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Standard Area Count_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Standard Area Count_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Width" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Width_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Width_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Height" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Height_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Height_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Centroid X" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Centroid X_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Centroid X_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Centroid Y" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Centroid Y_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Centroid Y_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Intensity Center X" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Intensity Center X_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Intensity Center X_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Intensity Center Y" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Intensity Center Y_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Intensity Center Y_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Integrated Intensity" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Integrated Intensity_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Integrated Intensity_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Average Intensity" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">True</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Average Intensity Worm</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">2</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Average Intensity_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Intensity Std. Dev." SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Intensity Std. Dev._Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Intensity Std. Dev._Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Minimum Intensity" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Minimum Intensity_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Minimum Intensity_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Maximum Intensity" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Maximum Intensity_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Maximum Intensity_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Perimeter" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Perimeter_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Perimeter_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Shape Factor" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">True</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Shape Factor_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">4</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Shape Factor_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Fiber Length" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Fiber Length_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Fiber Length_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Fiber Breadth" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Fiber Breadth_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Fiber Breadth_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Length" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Length_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Length_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Orientation" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Orientation_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Orientation_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Breadth" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Breadth_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Breadth_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Ell. Form Factor" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Ell. Form Factor_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Ell. Form Factor_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Pixel Centroid X" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Pixel Centroid X_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Pixel Centroid X_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Pixel Centroid Y" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Pixel Centroid Y_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Pixel Centroid Y_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Line Length" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Line Length_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Line Length_Sum</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">0</parameterItem>
+                    </parameterItem>
+                    <parameterItem itemType="suite" id="Features Count" SuiteMajorVersion="1" SuiteMinorVersion="0">
+                      <parameterItem itemType="valueSystem.Boolean" id="IsAverageCalculated">False</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="AverageMeasurement">Features Count_Average</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="AverageColumnOrderIndex">0</parameterItem>
+                      <parameterItem itemType="valueSystem.Boolean" id="IsSumCalculated">True</parameterItem>
+                      <parameterItem itemType="valueSystem.String" id="SumMeasurementLabel">Worm count</parameterItem>
+                      <parameterItem itemType="valueSystem.Int32" id="SumColumnOrderIndex">3</parameterItem>
+                    </parameterItem>
+                  </parameterItem>
+                </parameterItem>
+              </parameterItem>
+              <parameterItem itemType="valueSystem.Double" id="StandardArea">1</parameterItem>
+              <parameterItem itemType="valueSystem.Boolean" id="ShouldCreateObjectOverlay">True</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Objects Image">Texas Red</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="stepInputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Objects Image">FISH staining red</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0">
+              <parameterItem itemType="valueSystem.String" id="Object Definition">just worms</parameterItem>
+            </parameterItem>
+            <parameterItem itemType="suite" id="inputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputImageNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputMaskNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="suite" id="outputObjectMapNames" SuiteMajorVersion="1" SuiteMinorVersion="0" />
+            <parameterItem itemType="valueSystem.Int32" id="Version">2</parameterItem>
+            <parameterItem itemType="valueSystem.String" id="TransformId">Transform.MeasureMask</parameterItem>
+          </parameterItem>
+          <parameterItem itemType="valueSystem.String" id="StepDescription">Objects and features used for measurements.</parameterItem>
+        </parameterItem>
+      </parameterItem>
+      <parameterItem itemType="valueSystem.Int32" id="iconIndex">0</parameterItem>
+      <parameterItem itemType="suiteArrayMetaMorph.Utilities.Parameters.ValueParameter`1[System.String]" id="transformInputMaskNames" />
+      <parameterItem itemType="suiteArrayMetaMorph.Utilities.Parameters.ValueParameter`1[System.String]" id="transformOutputImageNames" />
+      <parameterItem itemType="suiteArrayMetaMorph.Utilities.Parameters.ValueParameter`1[System.String]" id="transformOutputMaskNames" />
+      <parameterItem itemType="valueSystem.String" id="TransformDescription">User-created custom module</parameterItem>
+      <parameterItem itemType="valueSystem.Int32" id="TransformMeasurementMethod" EnumValueName="SinglePlaneMeasurement">1</parameterItem>
+      <parameterItem itemType="suiteArrayMetaMorph.Utilities.Parameters.ValueParameter`1[System.String]" id="inputImageAliases">
+        <parameterItem itemType="valueSystem.String" id="inputImageName0">FISH staining red</parameterItem>
+        <parameterItem itemType="valueSystem.String" id="inputImageName1">TL 30</parameterItem>
+      </parameterItem>
+      <parameterItem itemType="suiteArrayMetaMorph.Utilities.Parameters.ValueParameter`1[System.String]" id="inputChannelAssignments">
+        <parameterItem itemType="valueSystem.String" id="channelAssignment0">Texas Red</parameterItem>
+        <parameterItem itemType="valueSystem.String" id="channelAssignment1">TL 30</parameterItem>
+      </parameterItem>
+      <parameterItem itemType="suiteArrayMetaMorph.Utilities.Parameters.ValueParameter`1[System.String]" id="transformInputImageNames">
+        <parameterItem itemType="valueSystem.String" id="inputChannel0">Texas Red</parameterItem>
+        <parameterItem itemType="valueSystem.String" id="inputChannel1">TL 30</parameterItem>
+      </parameterItem>
+    </parameterItem>
+  </TypeParameter>
+</ParisUemParameter>
