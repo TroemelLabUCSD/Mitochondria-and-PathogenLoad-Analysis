@@ -47,6 +47,9 @@ write_csv(combined_data, file.path(dir_path, "results.csv"))
 # Print a message indicating the completion of the process
 cat("Data has been successfully combined and saved to 'results.csv'.\n")
 
+#Please double check that each image mask file only has one entry in the combined results.csv - There is a bug in R where the cache is not reset properly and there may be duplicate entries from the same image file.
+#The correct way to check is using the "Filename" column and each image mask should only be listed once.
+
 ```
 
 ```{r}
