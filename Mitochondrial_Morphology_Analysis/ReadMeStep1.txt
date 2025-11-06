@@ -4,7 +4,8 @@ Next please review that you have all the essential plugins for Fiji. This code w
 
 To ensure you have installed the correct mitochondria analyzer plugins, please review the mitochondria analyzer manual.
 
-These confocal images MUST be TWO channel only, bight field "T PMT" and a single fluorecent channel, in this case green was used so it is listed as "Ch2 (G)"
+These confocal images MUST be TWO channel only, bight field "T PMT" and a single fluorecent channel, in this case green was used so it is listed as "Ch2 (G)" 
+NOTE:- This is true for ".lsm" file images. Newer confocal scopes from Zeiss have ".czi" files and thus it changes the channel output. In order to process these different files a new .ijm macro has been added and labeled accordingly. Please use that fiji macro instead if you are using .czi files instead of .lsm files
 
 Next, you will create a new folder. You can title this "Analysis_folder_1_experimentINformation" where you can replace experiment information with any other relevent information for your own experiment.
 
