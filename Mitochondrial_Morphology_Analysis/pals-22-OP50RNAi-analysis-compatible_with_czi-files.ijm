@@ -20,6 +20,7 @@ for (i = 0; i < list.length; i++) {
 
     // Set X unit to microns
     run("Set Scale...", "distance=1 known=0.06761 unit=microns");
+    // Note: this image properties differ from other .ijm macros because it was taken on a different confocal microscope
 
     // Set image properties
     run("Properties...", "channels=1 slices=1 frames=1 pixel_width=0.06761 pixel_height=0.06761 voxel_depth=0");
